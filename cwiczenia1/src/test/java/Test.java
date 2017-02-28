@@ -4,10 +4,7 @@
 
     import static org.junit.Assert.*;
 
-    import com.company.Vector;
-    import com.company.VectorImpl;
-    import com.company.X;
-    import com.company.XMockImp;
+    import com.company.*;
     import org.junit.After;
     import org.junit.Before;
     import org.junit.runner.*;
@@ -20,15 +17,6 @@
     public class Test {
     X x = new XMockImp();
     Vector vector = new VectorImpl();
-    @Before
-    public void prepare(){
-        System.out.println("Przed testem");
-
-    }
-    @After
-    public void afterM(){
-        System.out.println("Po tescie");
-    }
 
     @org.junit.Test
     public void testSum(){
@@ -50,7 +38,13 @@
 
         VektorSum.add(5.4);
         VektorSum.add(9.7);
-        assertEquals(VektorSum, vector.add(Vektor1, Vektor2));
+        try {
+            assertEquals(VektorSum, vector.add(Vektor1, Vektor2));
+        } catch (MyOwnException e) {
+//            e.printStackTrace();
+            assertFalse(true);
+        }
+
     }
     }
 
