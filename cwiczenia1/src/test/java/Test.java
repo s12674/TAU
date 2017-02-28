@@ -23,6 +23,21 @@
         assertEquals(7, x.sum(5,2));
         assertEquals(6, x.sum(4,2));
     }
+
+    @org.junit.Test(expected = MyOwnException.class)
+    public void testExpected() throws MyOwnException {
+        List<Double> VektorSum = new ArrayList<Double>();
+        List<Double> Vektor1 = new ArrayList<Double>();
+        List<Double> Vektor2 = new ArrayList<Double>();
+
+        Vektor1.add(2.2);
+        Vektor1.add(7.2);
+        Vektor2.add(3.2);
+        VektorSum.add(5.4);
+        VektorSum.add(9.7);
+        assertEquals(VektorSum, vector.add(Vektor1, Vektor2));
+
+    }
     @org.junit.Test
     public void testVektor(){
         List<Double> VektorSum = new ArrayList<Double>();

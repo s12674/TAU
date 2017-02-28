@@ -20,8 +20,9 @@ public class VectorImpl implements Vector {
     }
 
     public List<Double> add(List<Double> Vektor1, List<Double> Vektor2) throws MyOwnException {
-        assert Vektor1.size() == Vektor2.size() : "Wektory muszą być równe";
-        if(Vektor1.size()!=Vektor2.size()) throw new MyOwnException("Wektory musza byc takie same");
+        assert Vektor1.size() == Vektor2.size() : "Wektory muszą być tej samej wielkości";
+        if(Vektor1.size()!=Vektor2.size()) throw new MyOwnException("Wektory musza być samej wielkości");
+        if(Vektor1.isEmpty()) throw new MyOwnException("Wektor nie moze byc pusty");
         else {
             for (Double e : Vektor1) {
                 VektorSum.add(e + Vektor2.get(Vektor1.indexOf(e)));
