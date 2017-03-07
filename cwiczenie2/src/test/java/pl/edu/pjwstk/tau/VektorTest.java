@@ -44,7 +44,7 @@ public class VektorTest {
     }
 
     @org.junit.Test(expected = AssertionError.class)
-    public void testExpected() throws MyOwnException {
+    public void expectedTest() throws MyOwnException {
         Vektor v1 = new VektorImpl();
         Vektor v2 = new VektorImpl();
         Vektor sum = new VektorImpl();
