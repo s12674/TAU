@@ -16,6 +16,7 @@ public class RingImpl implements Ring {
     @Override
     public boolean shouldRing() {
         String t = time.getTime();
+        ring = false;
         for(MyTime e : timeList){
             if(e.getTime().equals(t)) {
                 if(!mark){

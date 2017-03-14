@@ -30,13 +30,32 @@ public class RingImplTest {
         MyTime timeRing = new MyTimeImpl();
         timeRing.setTime(12, 1, 1994, 12, 0);
         ringImpl.addAlarmTime(timeRing);
-        expect(time.getTime()).andReturn("1211994120").andReturn("1211994120").andReturn("1211994120").andReturn("100994120").andReturn("1211994120");
+        expect(time.getTime())
+                .andReturn("1211994120")
+                .andReturn("1211994120")
+                .andReturn("1211994120")
+                .andReturn("100994120")
+                .andReturn("1211994120")
+                .andReturn("1211994120");
         replay(time);
         assertEquals(true, ringImpl.shouldRing());
         assertEquals(false, ringImpl.shouldRing());
         assertEquals(false, ringImpl.shouldRing());
         assertEquals(false, ringImpl.shouldRing());
         assertEquals(true, ringImpl.shouldRing());
+        assertEquals(false, ringImpl.shouldRing());
+        verify(time);
+    }
+    @org.junit.Test
+    public void clearRingTest() {
+        MyTime timeRing = new MyTimeImpl();
+        timeRing.setTime(12, 1, 1994, 12, 0);
+        ringImpl.addAlarmTime(timeRing);
+        expect(time.getTime()).andReturn("1211994120").anyTimes();
+        replay(time);
+        assertEquals(true, ringImpl.shouldRing());
+        ringImpl.clearAlarmTime(timeRing);
+        assertEquals(false, ringImpl.shouldRing());
         verify(time);
     }
 }
