@@ -18,7 +18,8 @@ public class RingImpl implements Ring {
         String t = time.getTime();
         ring = false;
         for(MyTime e : timeList){
-            if(e.getTime().equals(t)) {
+            Long test = (Long.parseLong(t) - Long.parseLong(e.getTime()));
+            if((e.getTime().equals(t)) || test < 3 && test >=0) {
                 if(!mark){
                     ring = true;
                     mark = true;

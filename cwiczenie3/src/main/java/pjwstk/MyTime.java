@@ -5,5 +5,5 @@ package pjwstk;
  */
 public interface MyTime {
     public String getTime();
-    public void setTime(int day, int month, int year, int hour, int min);
+    public void setTime(String day, String month, String year, String hour, String min);
 }
