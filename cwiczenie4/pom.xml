@@ -25,6 +25,7 @@
         <configuration>
           <includes>
             <include>**/*Test.java</include>
+            <include>**/*Story.java</include>
           </includes>
         </configuration>
       </plugin>
