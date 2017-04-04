@@ -9,7 +9,6 @@ target
 # compiled output
 /dist
 /tmp
-/SS
 
 # dependencies
 /node_modules
