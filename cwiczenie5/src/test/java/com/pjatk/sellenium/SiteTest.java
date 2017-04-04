@@ -47,7 +47,7 @@ public class SiteTest {
             pathToSS = "D:\\PJWSTK\\TAU\\SS\\";
         }
         else{
-            pathToSS = "/SS/";
+            pathToSS = "target/";
         }
         driver.manage().deleteAllCookies();
         driver.manage().getCookies().clear();
