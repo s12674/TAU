@@ -46,7 +46,7 @@ public class SiteStories extends JUnitStories {
         else{
             System.setProperty(
                     PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-                    "phantomjs"
+                    "target/phantomjs"
             );
         }
     }

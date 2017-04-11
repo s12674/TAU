@@ -47,7 +47,7 @@ public class SiteTest {
         else{
             caps.setCapability(
                     PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-                    "phantomjs"
+                    "target/phantomjs"
             );
         }
 
@@ -56,6 +56,9 @@ public class SiteTest {
 
     @Before
     public void setUp() throws Exception {
+
+
+
         if(OsValidator.isWindows()){
             pathToSS = "D:\\PJWSTK\\TAU\\cwiczenie6\\ss\\";
         }
