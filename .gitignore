@@ -10,10 +10,11 @@ target
 /dist
 /tmp
 /SS
-
+/cwiczenie5
+/cwiczenie5/
 # dependencies
 /node_modules
-
+*.exe
 # IDEs and editors
 /.idea
 .project
